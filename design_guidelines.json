@@ -1,0 +1,168 @@
+{
+  "typography": {
+    "headings": {
+      "family": "Outfit, sans-serif",
+      "weights": ["300", "400", "500", "600"],
+      "usage": "Use Outfit for all primary headings (H1-H4), dashboard metrics numbers, and key interactive elements. Keep tracking tight (tracking-tight) for a premium, Apple-like feel."
+    },
+    "body": {
+      "family": "Manrope, sans-serif",
+      "weights": ["400", "500"],
+      "usage": "Use Manrope for all table data, lead details, chat logs, and standard paragraphs. Ensures high legibility at small sizes."
+    },
+    "scale": {
+      "h1": "text-4xl sm:text-5xl font-medium tracking-tight",
+      "h2": "text-2xl sm:text-3xl font-medium tracking-tight",
+      "h3": "text-xl sm:text-2xl font-medium tracking-tight",
+      "metric": "text-4xl font-light tracking-tighter",
+      "body": "text-sm sm:text-base text-white/70",
+      "label": "text-xs uppercase tracking-[0.15em] font-semibold text-white/50"
+    }
+  },
+  "colors": {
+    "theme": "Dark Mode First (Cosmic Apple Aesthetic)",
+    "backgrounds": {
+      "app": "#05050A",
+      "sidebar": "#09090E",
+      "card_base": "rgba(255, 255, 255, 0.02)",
+      "card_hover": "rgba(255, 255, 255, 0.04)"
+    },
+    "surfaces": {
+      "glass": "backdrop-blur-xl bg-white/5 border border-white/10",
+      "glass_heavy": "backdrop-blur-2xl bg-[#0A0A10]/80 border border-white/5",
+      "input": "bg-white/5 border border-white/10 focus:border-[#D4AF37]/50 focus:bg-white/10"
+    },
+    "accents": {
+      "primary": "#D4AF37",
+      "primary_hover": "#F3E5AB",
+      "secondary": "#8B5CF6",
+      "hot_lead": "#FF453A",
+      "warm_lead": "#FF9F0A",
+      "cold_lead": "#0A84FF",
+      "success": "#32D74B"
+    },
+    "text": {
+      "primary": "#FFFFFF",
+      "secondary": "rgba(255, 255, 255, 0.7)",
+      "tertiary": "rgba(255, 255, 255, 0.4)",
+      "on_accent": "#000000"
+    }
+  },
+  "visual enhancers": {
+    "borders": "1px solid rgba(255, 255, 255, 0.08)",
+    "shadows": {
+      "ambient": "shadow-[0_8px_32px_rgba(0,0,0,0.4)]",
+      "glow": "shadow-[0_0_24px_rgba(212,175,55,0.15)]"
+    },
+    "textures": "Use extremely subtle noise overlays on empty states or the main hero login background to reduce digital flatness. Backgrounds should feel deep and cosmic without being distracting.",
+    "radii": {
+      "card": "rounded-2xl",
+      "button": "rounded-full",
+      "input": "rounded-xl",
+      "badge": "rounded-full"
+    }
+  },
+  "component name": {
+    "cards": "Premium Bento Cards (Flat, glassmorphic, no heavy shadows. 1px stroke, ambient inner glow).",
+    "buttons": "Apple-style pill buttons. Primary CTA in Champagne Gold (#D4AF37) with black text. Secondary in glassmorphic white/10.",
+    "inputs": "Flush, subtle borders. Focus state illuminates the border with the Gold accent.",
+    "badges": "Pill-shaped, using 15% opacity background of the accent color with 100% opacity text.",
+    "kanban": "Subtle column separators (border-r white/5). Cards within kanban should have drag-hover states (scale up 1%, border glows).",
+    "tables": "Edge-to-edge data tables inside cards. No vertical dividers. Horizontal dividers in white/5. Hover state on rows.",
+    "ai_chat": "Floating glassmorphic orb or widget. Chat bubbles should use #1E1E24 for user and #D4AF37/10 for AI."
+  },
+  "grids": {
+    "dashboard_layout": "CSS Grid. 12-column foundation. Use 'gap-6'.",
+    "kpi_metrics": "grid-cols-2 md:grid-cols-4 lg:grid-cols-5. Tall cards for top metrics, square for secondary.",
+    "bento_spacing": "Consistent 'gap-6'. Padding inside cards should be 'p-6' or 'p-8'."
+  },
+  "layouts": {
+    "structure": "Sidebar (fixed, w-64, w-20 collapsed) + Main Content area. Topbar for global search/actions.",
+    "page_header": "Generous top padding (pt-8), large H1, subtle breadcrumbs, and primary page actions aligned to the right.",
+    "lead_detail": "Two-column layout (70/30 split). Left: Lead info, documents, timeline. Right: Quick actions, status, tags.",
+    "responsive": "Stack columns on mobile. Sidebar becomes bottom navigation or hamburger menu on mobile viewports."
+  },
+  "motion": {
+    "hover": "Subtle scale (transform scale-[1.02]) and brightness increase for cards. Button hover darkens slightly.",
+    "transitions": "transition-all duration-300 ease-out",
+    "page_load": "Staggered fade-up for dashboard elements using framer-motion.",
+    "microinteractions": "Heartbeat pulse on 'Hot Lead' indicators. Smooth height expansion for accordions."
+  },
+  "accessibility": {
+    "contrast": "Ensure text opacity is never below 50% for readable text. Gold on dark backgrounds must be checked for APCA contrast.",
+    "focus": "focus-visible:ring-2 focus-visible:ring-[#D4AF37] focus-visible:ring-offset-2 focus-visible:ring-offset-[#05050A] outline-none",
+    "motion": "Respect prefers-reduced-motion. Provide static fallbacks for complex animations.",
+    "testing": "All interactive and key informational elements MUST include a data-testid attribute in kebab-case."
+  },
+  "media": {
+    "avatars": "High-quality, rounded-full, with a 2px border of white/10.",
+    "documents": "Thumbnail previews for palm reading/signature images should be strictly aspect-square with object-cover and rounded-lg.",
+    "empty_states": "Use subtle line-art icons or abstract shapes rather than generic illustrations."
+  },
+  "3d libraries": {
+    "usage": "Use Framer Motion for elegant 2D layout transitions. Avoid heavy 3D unless implementing an interactive astrology chart visualization. For the login screen or AI Receptionist idle state, a subtle Three.js (React Three Fiber) floating cosmic orb or particle field can be used if performance permits."
+  },
+  "image urls": {
+    "astrologer_portrait": {
+      "url": "https://images.pexels.com/photos/33261949/pexels-photo-33261949.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Professional portrait of the solo astrologer, Manoj Sahu."
+    },
+    "cosmic_background": {
+      "url": "https://images.pexels.com/photos/9665214/pexels-photo-9665214.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Dark textured cosmic particle background for login screen or premium hero sections."
+    },
+    "lead_avatar_1": {
+      "url": "https://images.pexels.com/photos/37148308/pexels-photo-37148308.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Professional avatar for high-ticket lead."
+    },
+    "lead_avatar_2": {
+      "url": "https://images.pexels.com/photos/27086922/pexels-photo-27086922.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Professional avatar for high-ticket lead."
+    },
+    "lead_avatar_3": {
+      "url": "https://images.pexels.com/photos/29852852/pexels-photo-29852852.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Professional avatar for high-ticket lead."
+    }
+  },
+  "component_path": {
+    "ui": "/app/frontend/src/components/ui",
+    "pages": "/app/frontend/src/pages",
+    "layouts": "/app/frontend/src/components/layout"
+  },
+  "instructions_to_main_agent": [
+    "Install the required fonts from Google Fonts: 'Outfit' and 'Manrope'.",
+    "Configure tailwind.config.js with the custom colors defined in 'colors' (app-bg, sidebar-bg, primary gold, etc.).",
+    "Use lucide-react for standard icons, but ensure stroke-width is set to 1.5 for a sleeker, high-end Apple-like look.",
+    "For the dashboard cards, do NOT use default Shadcn shadows. Override them with the glassmorphism and ambient shadow rules defined here.",
+    "Implement the Kanban board using a responsive CSS grid or flex layout. Make it horizontally scrollable if columns exceed viewport width.",
+    "The AI Receptionist should be accessible via a floating action button (FAB) in the bottom right, opening a glassmorphic chat interface.",
+    "Avoid the generic 'SaaS Blue'. This is a premium astrology service. Rely on Obsidian Black, White text, and Champagne Gold accents.",
+    "In the routing, provide placeholders for: /dashboard, /leads, /pipeline, /calendar, /ai-chat, /settings.",
+    "Use framer-motion to stagger the entrance of KPI cards on the dashboard.",
+    "All components must be .js or .jsx as the project uses JS."
+  ],
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "You tend to converge toward generic, 'on distribution' outputs. In frontend design, this creates what users call the 'AI slop' aesthetic. Avoid this: make creative, distinctive frontends that surprise and delight.",
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "You MUST NOT apply universal transition. Eg: `transition: all`. Always add transitions for specific interactive elements.",
+    "You MUST NOT center align the app container, ie do not add `.App { text-align: center; }` in the css file. This disrupts the human natural reading flow of text.",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style.",
+    "NEVER: use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯 etc for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+    "Main agent relies on these image URLs. Missing categories = main agent will use placeholder text which is FORBIDDEN.",
+    "Prioritize using pre-existing components from src/components/ui when applicable.",
+    "Use `sonner` for toasts, located in `/app/src/components/ui/sonner.js` or `.jsx`."
+  ],
+  "GENERAL UI UX DESIGN GUIDELINES": [
+    "Desktop-first approach: Optimize complex data tables, pipelines, and calendars for large screens first, but ensure they stack cleanly on mobile.",
+    "All interactive and key informational elements MUST include a `data-testid` attribute in kebab-case format.",
+    "Never use completely transparent backgrounds for overlays, modals, or floating headers. Always apply a backdrop blur and a slight tint (e.g., bg-black/60) to maintain text readability.",
+    "Apply 'optical alignment' over strict mathematical alignment for icons and text.",
+    "Provide empty states that are beautifully designed rather than a blank screen. Tell the user what to do next."
+  ]
+}
